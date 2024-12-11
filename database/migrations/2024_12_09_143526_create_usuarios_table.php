@@ -14,19 +14,15 @@ return new class extends Migration
         Schema::create('usuario', function (Blueprint $table) {
             $table->id();
             $table->bigInteger("Documento");
-            $table->string("Nombre",80);
-            $table->string("Apellido",80);
-            $table->bigInteger("Telefono",);
-            $table->string("Password",128);
-            $table->string("Correo",100);
+            $table->string("Nombre", 80);
+            $table->string("Apellido", 80);
+            $table->bigInteger("Telefono"); 
+            $table->string("Password", 128);
+            $table->string("Correo", 100);
             $table->enum('Rol', ['Administrador', 'Empleado']);
             $table->enum('Estado', ['Activo', 'Inactivo']);
             $table->enum('Tipo_documento', ['Cedula', 'Registro Civil', 'Cedula de Extranjera']);
-
-
             $table->timestamps(); 
-
-        
         });
     }
 
